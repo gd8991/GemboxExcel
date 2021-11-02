@@ -1,0 +1,11 @@
+---
+applications:
+  - name: demo-excel-api
+    memory: 512M
+    buildpacks:
+      - https://github.com/cloudfoundry/apt-buildpack.git
+      - dotnet_core_buildpack    
+    env:
+      ASPNETCORE_ENVIRONMENT: dev
+      CACHE_NUGET_PACKAGES: false
+      CF_TRACE: true
